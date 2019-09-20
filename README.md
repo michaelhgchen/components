@@ -2,9 +2,13 @@
 
 #### References
 [WAI-ARIA Roles](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)
+
 [WAI-ARIA Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#aria_ex)
+
 [WAI-ARIA Properties](https://www.w3.org/TR/html-aria/#allowed-aria-roles-states-and-properties)
+
 [Udacity](https://classroom.udacity.com/courses/ud891)
+
 [Material-UI](https://material-ui.com)
 
 #### TODO: Widgets
