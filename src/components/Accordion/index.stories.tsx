@@ -23,6 +23,10 @@ export const test = () => (
       {
         body: "Body 3",
         header: "Header 3"
+      },
+      {
+        body: "Body 4",
+        header: "Header 4"
       }
     ]}
   />

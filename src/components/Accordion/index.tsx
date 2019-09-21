@@ -8,19 +8,16 @@ export interface IAccordionProps {
   items: Array<Pick<IAccordionItemProps, "header" | "body">>;
 }
 
-const getInBoundsSet = (setFn: (index: number) => void, max: number) => (
-  index: number
-) => {
-  setFn((index + max) % max);
-};
-
 const Accordion: React.FC<IAccordionProps> = props => {
   const { initialExpanded, items, id } = props;
   const numItems = items.length;
 
   const [expandedIndex, setExpandedIndex] = useState(initialExpanded);
 
-  const setExpandedIndexInBounds = getInBoundsSet(setExpandedIndex, numItems);
+  const toggleExpanded = (index: number) => {
+    const indexToToggle = (index + numItems) % numItems;
+    setExpandedIndex(indexToToggle === expandedIndex ? -1 : indexToToggle);
+  }
 
   const setFocus = (index: number) => {
     const accordionToggles = document.querySelectorAll<HTMLButtonElement>(
@@ -40,7 +37,7 @@ const Accordion: React.FC<IAccordionProps> = props => {
             id={id}
             index={i}
             isExpanded={i === expandedIndex}
-            onExpand={setExpandedIndexInBounds}
+            onExpand={toggleExpanded}
             onFocus={setFocus}
             {...item}
           />

@@ -79,6 +79,7 @@ const AccordionItem: React.FC<IAccordionItemProps> = props => {
       <AccordionHeader id={headerId}>
         <AccordionToggle
           aria-controls={bodyId}
+          // aria-disabled={isExpanded} // if we want to prevent closinig when expanded
           aria-expanded={isExpanded ? "true" : "false"}
           data-accordion-id={toggleId}
           onClick={() => onExpand(index)}
