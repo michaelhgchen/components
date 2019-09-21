@@ -12,7 +12,7 @@
 [Material-UI](https://material-ui.com)
 
 #### TODO: Widgets
-- [ ] Accordion
+- [x] Accordion
 - [ ] Alert
 - [ ] Alert/Message Dialog
 - [ ] Breadcrumb
